@@ -1,0 +1,25 @@
+group 'cn.nova.client'
+version '1.0'
+
+jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from {
+        (configurations.runtimeClasspath).collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+    from sourceSets.main.allJava
+}
+
+dependencies {
+    implementation (
+            'io.netty:netty-codec:4.1+',
+            'io.netty:netty-buffer:4.1+',
+            'io.netty:netty-common:4.1+',
+            'io.netty:netty-resolver:4.1+',
+            'io.netty:netty-transport:4.1+',
+            'org.apache.logging.log4j:log4j-api:+',
+            'org.apache.logging.log4j:log4j-core:+',
+            project(":NovaIO-Base")
+    )
+}

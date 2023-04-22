@@ -1,0 +1,11 @@
+/.idea/
+/.gradle/
+/NovaIO-Server-Common/build/
+/NovaIO-Server-ViewNode/build/
+/NovaIO-Server-DataNode/build/
+/NovaIO-Client/build/
+/NovaIO-Common/build/
+
+# 项目排除路径
+/NovaIO-Base/build/
+/NovaIO-Base/build/classes/java/main/
